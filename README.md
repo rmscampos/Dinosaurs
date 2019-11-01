@@ -1,9 +1,9 @@
 
 The purpose of this quiz is to challenge the user’s preconceptions of dinosaurs, in regards to which geologic period different species lived in. Many people mistakenly believe that certain dinosaurs cohabited (due to misinformation in the media and entertainment). It can also be used as a tool to teach younger children about the 3 major time periods that dinosaurs lived in. My intent is to inform, but also to keep score. At the end of the game, there will be an option to play again or view the answers.
 
-User #1:
+- User #1:
   Adult who grew up watching the Jurassic Park series and thinks that the dinosaur species presented in the movie actually lived in the same time period with each other.
-User #2:
+- User #2:
   Child who is learning about dinosaurs and has only seen media geared toward children that conveys the idea that dinosaurs lived ‘a long time ago’ but with no distinction of different eras.
 
 As a user, I will :
