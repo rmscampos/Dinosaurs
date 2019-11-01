@@ -20,9 +20,9 @@ As a user, I will :
 - if I choose ‘Play Again’, the page will refresh to the beginning and the game will begin again, but with randomized dinosaurs
 
 Technology:
-HTML: to structure each page using divs
-CSS: styling of my game to include photos, animations, colors, and other visual stimuli
-JS: to include clickable buttons, interactive multiple-choice questions, the ability to reset the game or view the correct answers, input of sounds for win/lose page
+- HTML: to structure each page using divs
+- CSS: styling of my game to include photos, animations, colors, and other visual stimuli
+- JS: to include clickable buttons, interactive multiple-choice questions, the ability to reset the game or view the correct answers, input of sounds for win/lose page
 
 Stretch goals:
 - timer that counts down for each question
@@ -33,11 +33,11 @@ Stretch goals:
 
 
 Data Structure:
-  Layout :
+- Layout :
 	I would like to structure the pages with the use of divs, since I don’t have much experience with them.
-  Questions: 
+- Questions: 
 	The multiple-choice answers on each page will be organized in arrays, with each answer being a string/object. I will be using looping methods to generate the answer choices on each page, 	 at random.
-  Media: 
+- Media: 
        I will be using still formats and hopefully, gifs/animations, audio (sounds for the win/lose page).
 
   
