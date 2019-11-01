@@ -15,13 +15,18 @@
 /*----- event listeners -----*/
 
 //start button
+
+document.getElementById('start').addEventListener('click', startGame)
 //each answer button (checkbox)
 //submit answer button (next)
 //
 
 
 /*----- functions -----*/
-
+//start button
+function startGame(evt) {
+    console.log(evt);
+}
 //check answer
 //render the question
 //render progress
