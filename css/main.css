@@ -9,8 +9,22 @@ h2 {
 img {
     width: 350px;
     height: 300px;
-    border-radius: 5%;
 }
+
+/* #bg {
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    min-width: 100%;
+    min-height: 100%;
+    opacity: .5;
+  } */
+
+p {
+    text-align: center;
+}
+
+
 
 div {
     display: flex;
@@ -18,7 +32,8 @@ div {
     border-radius: 5%;
 }
 
-/* #start {
+
+#start {
     font-size: 20px;
     text-align: center;
-} */
+}

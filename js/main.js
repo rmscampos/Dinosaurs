@@ -145,7 +145,7 @@ document.getElementById('replay').addEventListener('click', replayGame);
 };
 
 function startGame(evt) {
-    console.log(evt);
+    buildQuiz();
 };
 function nextQuestion(evt) {
     console.log(evt);
