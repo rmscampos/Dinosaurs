@@ -99,10 +99,12 @@ let dinosaurs = [
 //timer
 //score (const scorePercent = Math.round(100 * score/questions.length)
 
+let currentQuestion = 0;
 let numCorrect = 0;
 
 /*----- cached element references -----*/
 
+// const startButton = document.getElementById('start');
 
 
 /*----- event listeners -----*/
@@ -113,8 +115,6 @@ document.getElementById('previous').addEventListener('click', previousQuestion);
 document.getElementById('finish').addEventListener('click', submitAnswers);
 document.getElementById('answers').addEventListener('click', viewAnswers);
 document.getElementById('replay').addEventListener('click', replayGame);
-
-//each answer button 
 
 
 
@@ -144,8 +144,12 @@ document.getElementById('replay').addEventListener('click', replayGame);
         quizContainer.innerHTML = output.join("");
 };
 
+
 function startGame(evt) {
-    buildQuiz();
+    let sections = document.querySelectorAll('.questions');
+    // sections['div1'...'div10'];
+    // section[currentQuestion];
+    //div1 display = row or flex;
 };
 function nextQuestion(evt) {
     console.log(evt);

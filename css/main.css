@@ -6,6 +6,9 @@ h2 {
     text-align: center;
 }
 
+h3 {
+    text-align: center;
+}
 img {
     width: 350px;
     height: 300px;
@@ -24,14 +27,15 @@ p {
     text-align: center;
 }
 
-
-
 div {
     display: flex;
     justify-content: center;
     border-radius: 5%;
 }
 
+/* .questions {
+    display: none;
+} */
 
 #start {
     font-size: 20px;

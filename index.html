@@ -11,29 +11,109 @@
 <body>
     <header>
         <h1>Dinosaur Quiz</h1>
-        <h2>The media was so preoccupied with whether or not they could, they didn't stop to think if they should.</h2>
+        <h2>Quote.</h2>
+        <h3>Instructions</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet magni perferendis iste, repudiandae magnam mollitia hic fugit eaque rerum, iure odit at. Dolorem amet consectetur impedit laborum facere mollitia at.</p>
     </header> 
     <div id='bg'>
-    <img src='assets/Dino Images/dinohome.jpg' id='bg' alt="We've got a t-rex."/>
+        <img src='assets/Dino Images/dinohome.jpg' id='bg' alt="We've got a t-rex."/>
     </div>
-    <div class='container'>
+   
+    <div class='quiz-container' id='quiz'>
+        <p class='questions' id='stegosaurus'>Stegosaurus</p>
+        <div>
+            <input type='radio' id='jurassic' value='jurassic'>
+            <label='jurassic'>Jurassic</label>
+            <input type='radio' id='cretaceous' value='cretaceous'>
+            <label='cretaceous'>Cretaceous</label>
+            <input type='radio' id='triassic' value='triassic'>
+            <label='triassic'>Triassic</label>
+        </div>
+        <p class='questions' id='tyrannosaurus'>Tyrannosaurus Rex</p>
+        <div>
+            <input type='radio' id='triassic' value='triassic'>
+            <label='triassic'>Triassic</label>
+            <input type='radio' id='cretaceous' value='cretaceous'>
+            <label='cretaceous'>Cretaceous</label>
+            <input type='radio' id='jurassic' value='jurassic'>
+            <label='jurassic'>Jurassic</label>
+        </div>
+        <p class='questions' id='apatosaurus'>Apatosaurus</p>
+        <div>
+            <input type='radio' id='cretaceous' value='cretaceous'>
+            <label='cretaceous'>Cretaceous</label>
+            <input type='radio' id='triassic' value='triassic'>
+            <label='triassic'>Triassic</label>
+            <input type='radio' id='jurassic' value='jurassic'>
+            <label='jurassic'>Jurassic</label>
+        </div>
+        <p class='questions' id='procompy'>Procompsognathus/p>
+        <div>
+            <input type='radio' id='jurassic' value='jurassic'>
+            <label='jurassic'>Jurassic</label>
+            <input type='radio' id='cretaceous' value='cretaceous'>
+            <label='cretaceous'>Cretaceous</label>
+            <input type='radio' id='triassic' value='triassic'>
+            <label='triassic'>Triassic</label>
+        </div>
+        <p class='questions' id='brachiosaurus'>Brachiosaurus</p>
+        <div>
+            <input type='radio' id='triassic' value='triassic'>
+            <label='triassic'>Triassic</label>
+            <input type='radio' id='jurassic' value='jurassic'>
+            <label='jurassic'>Jurassic</label>
+            <input type='radio' id='cretaceous' value='cretaceous'>
+            <label='cretaceous'>Cretaceous</label>
+        </div>
+        <p class='questions' id='velociraptor'>Velociraptor</p>
+        <div>
+            <input type='radio' id='jurassic' value='jurassic'>
+            <label='jurassic'>Jurassic</label>
+            <input type='radio' id='cretaceous' value='cretaceous'>
+            <label='cretaceous'>Cretaceous</label>
+            <input type='radio' id='triassic' value='triassic'>
+            <label='triassic'>Triassic</label>
+        </div>
+        <p class='questions' id='eoraptor'>Eorapter</p>
+        <div>
+            <input type='radio' id='cretaceous' value='cretaceous'>
+            <label='cretaceous'>Cretaceous</label>
+            <input type='radio' id='jurassic' value='jurassic'>
+            <label='jurassic'>Jurassic</label>
+            <input type='radio' id='triassic' value='triassic'>
+            <label='triassic'>Triassic</label>
+        </div>
+        <p class='questions' id='triceratops'>Triceratops</p>
+        <div>
+            <input type='radio' id='jurassic' value='jurassic'>
+            <label='jurassic'>Jurassic</label>
+            <input type='radio' id='triassic' value='triassic'>
+            <label='triassic'>Triassic</label>
+            <input type='radio' id='cretaceous' value='cretaceous'>
+            <label='cretaceous'>Cretaceous</label>
+        </div>
+        <p class='questions' id='ankylosaurus'>Anklyosaurus</p>
+        <div>
+            <input type='radio' id='triassic' value='triassic'>
+            <label='triassic'>Triassic</label>
+            <input type='radio' id='cretaceous' value='cretaceous'>
+            <label='cretaceous'>Cretaceous</label>
+            <input type='radio' id='jurassic' value='jurassic'>
+            <label='jurassic'>Jurassic</label>
+        </div>
+        <p class='questions' id='iguanodon'>Iguanodon</p>
+        <div>
+            <input type='radio' id='jurassic' value='jurassic'>
+            <label='jurassic'>Jurassic</label>
+            <input type='radio' id='cretaceous' value='cretaceous'>
+            <label='cretaceous'>Cretaceous</label>
+            <input type='radio' id='triassic' value='triassic'>
+            <label='triassic'>Triassic</label>
+        </div>
     </div>
-    <div class='quiz-container'>
-        <div id='quiz'></div>
-    </div>
-<p>Stegosaurus</p>
-    <div class='questions' id='stegosaurus'>
-        <input type='radio' id='jurassic' value='jurassic' checked>
-        <label='jurassic'>Jurassic</label>
-    </div>
-    <div>
-        <input type='radio' id='cretaceous' value='cretaceous'>
-        <label='cretaceous'>Cretaceous</label>
-    </div>
-    <div>
-        <input type='radio' id='triassic' value='triassic'>
-        <label='triassic'>Triassic</label>
-    </div>
+
+
+
     <button id='start'>Start!</button>
     <button id='next'>Next</button>
     <button id='previous'>Previous</button>
