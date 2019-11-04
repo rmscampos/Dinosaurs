@@ -1,6 +1,106 @@
 /*----- constants -----*/
 
-//questions
+let dinosaurs = [
+    { 
+        dinosaur: 'Stegosaurus',
+        answers: { 
+        a: 'Jurassic', 
+        b: 'Cretaceous',  
+        c: 'Triassic'
+        },   
+        correctAnswer: 'a'
+    },
+    { 
+        dinosaur: 'Stegosaurus',
+        answers: { 
+        a: 'Jurassic', 
+        b: 'Cretaceous',  
+        c: 'Triassic'
+        },   
+        correctAnswer: 'a'
+    },
+    { 
+        dinosaur: 'Stegosaurus',
+        answers: { 
+        a: 'Jurassic', 
+        b: 'Cretaceous',  
+        c: 'Triassic'
+        },   
+        correctAnswer: 'a'
+    },
+    { 
+        dinosaur: 'Stegosaurus',
+        answers: { 
+        a: 'Jurassic', 
+        b: 'Cretaceous',  
+        c: 'Triassic'
+        },   
+        correctAnswer: 'a'
+    },
+    { 
+        dinosaur: 'Stegosaurus',
+        answers: { 
+        a: 'Jurassic', 
+        b: 'Cretaceous',  
+        c: 'Triassic'
+        },   
+        correctAnswer: 'a'
+    },
+    { 
+        dinosaur: 'Stegosaurus',
+        answers: { 
+        a: 'Jurassic', 
+        b: 'Cretaceous',  
+        c: 'Triassic'
+        },   
+        correctAnswer: 'a'
+    },
+    { 
+        dinosaur: 'Stegosaurus',
+        answers: { 
+        a: 'Jurassic', 
+        b: 'Cretaceous',  
+        c: 'Triassic'
+        },   
+        correctAnswer: 'a'
+    },
+    { 
+        dinosaur: 'Stegosaurus',
+        answers: { 
+        a: 'Jurassic', 
+        b: 'Cretaceous',  
+        c: 'Triassic'
+        },   
+        correctAnswer: 'a'
+    },
+    { 
+        dinosaur: 'Stegosaurus',
+        answers: { 
+        a: 'Jurassic', 
+        b: 'Cretaceous',  
+        c: 'Triassic'
+        },   
+        correctAnswer: 'a'
+    },
+    { 
+        dinosaur: 'Stegosaurus',
+        answers: { 
+        a: 'Jurassic', 
+        b: 'Cretaceous',  
+        c: 'Triassic'
+        },   
+        correctAnswer: 'a'
+    },
+    { 
+        dinosaur: 'Stegosaurus',
+        answers: { 
+        a: 'Jurassic', 
+        b: 'Cretaceous',  
+        c: 'Triassic'
+        },   
+        correctAnswer: 'a'
+    }
+];
 
 
 /*----- app's state (variables) -----*/
@@ -14,22 +114,38 @@
 
 /*----- event listeners -----*/
 
-//start button
+document.getElementById('start').addEventListener('click', startGame);
+document.getElementById('next').addEventListener('click', nextQuestion);
+document.getElementById('previous').addEventListener('click', previousQuestion);
+document.getElementById('finish').addEventListener('click', submitAnswers);
+document.getElementById('answers').addEventListener('click', viewAnswers);
+document.getElementById('replay').addEventListener('click', replayGame);
 
-document.getElementById('start').addEventListener('click', startGame)
 //each answer button (checkbox)
-//submit answer button (next)
-//
+
 
 
 /*----- functions -----*/
-//start button
+∆
 function startGame(evt) {
     console.log(evt);
-}
-//check answer
+};
+function nextQuestion(evt) {
+    console.log(evt);
+};
+function previousQuestion(evt) {
+    console.log(evt);
+};
+function submitAnswers(evt) {
+    console.log(evt);
+};
+function viewAnswers(evt) {
+    console.log(evt);
+};
+function replayGame(evt) {
+    console.log(evt);
+};
+
 //render the question
 //render progress
-//if answer is correct, change to this color (or image)
-//in answer is wrong, change to this color (or image)
 
