@@ -11,7 +11,7 @@ let dinosaurs = [
         correctAnswer: 'a'
     },
     { 
-        dinosaur: 'Stegosaurus',
+        dinosaur: 'Tyrannosaurus Rex',
         answers: { 
         a: 'Jurassic', 
         b: 'Cretaceous',  
@@ -20,7 +20,7 @@ let dinosaurs = [
         correctAnswer: 'a'
     },
     { 
-        dinosaur: 'Stegosaurus',
+        dinosaur: 'Apatosaurus',
         answers: { 
         a: 'Jurassic', 
         b: 'Cretaceous',  
@@ -29,7 +29,7 @@ let dinosaurs = [
         correctAnswer: 'a'
     },
     { 
-        dinosaur: 'Stegosaurus',
+        dinosaur: 'Procompsognathus',
         answers: { 
         a: 'Jurassic', 
         b: 'Cretaceous',  
@@ -38,7 +38,7 @@ let dinosaurs = [
         correctAnswer: 'a'
     },
     { 
-        dinosaur: 'Stegosaurus',
+        dinosaur: 'Brachiosaurus',
         answers: { 
         a: 'Jurassic', 
         b: 'Cretaceous',  
@@ -47,7 +47,7 @@ let dinosaurs = [
         correctAnswer: 'a'
     },
     { 
-        dinosaur: 'Stegosaurus',
+        dinosaur: 'Velociraptor',
         answers: { 
         a: 'Jurassic', 
         b: 'Cretaceous',  
@@ -56,7 +56,7 @@ let dinosaurs = [
         correctAnswer: 'a'
     },
     { 
-        dinosaur: 'Stegosaurus',
+        dinosaur: 'Eoraptor',
         answers: { 
         a: 'Jurassic', 
         b: 'Cretaceous',  
@@ -65,7 +65,7 @@ let dinosaurs = [
         correctAnswer: 'a'
     },
     { 
-        dinosaur: 'Stegosaurus',
+        dinosaur: 'Triceratops',
         answers: { 
         a: 'Jurassic', 
         b: 'Cretaceous',  
@@ -74,7 +74,7 @@ let dinosaurs = [
         correctAnswer: 'a'
     },
     { 
-        dinosaur: 'Stegosaurus',
+        dinosaur: 'Anklyosaurus',
         answers: { 
         a: 'Jurassic', 
         b: 'Cretaceous',  
@@ -83,7 +83,7 @@ let dinosaurs = [
         correctAnswer: 'a'
     },
     { 
-        dinosaur: 'Stegosaurus',
+        dinosaur: 'Iguanodon',
         answers: { 
         a: 'Jurassic', 
         b: 'Cretaceous',  
@@ -91,15 +91,6 @@ let dinosaurs = [
         },   
         correctAnswer: 'a'
     },
-    { 
-        dinosaur: 'Stegosaurus',
-        answers: { 
-        a: 'Jurassic', 
-        b: 'Cretaceous',  
-        c: 'Triassic'
-        },   
-        correctAnswer: 'a'
-    }
 ];
 
 
@@ -126,7 +117,7 @@ document.getElementById('replay').addEventListener('click', replayGame);
 
 
 /*----- functions -----*/
-∆
+
 function startGame(evt) {
     console.log(evt);
 };
