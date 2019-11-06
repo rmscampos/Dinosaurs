@@ -27,10 +27,8 @@ p {
     text-align: center;
 }
 
-div {
+div1, div2, div3 {
     display: flex;
-    justify-content: center;
-    border-radius: 5%;
 }
 
 /* .questions {

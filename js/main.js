@@ -1,4 +1,14 @@
 /*----- constants -----*/
+// global JavaScript variables
+
+//will keep track of the items to diaply on the current page only
+let pageList = [];
+//where we are in the pagination
+let currentPage = 1;
+//amount of objects per page
+let numberPerPage = 1;
+
+// let numberOfPages = 1;   // calculates the total number of pages, maybe not necessary
 
 let dinosaurs = [
     { 
@@ -99,7 +109,7 @@ let dinosaurs = [
 //timer
 //score (const scorePercent = Math.round(100 * score/questions.length)
 
-let currentQuestion = 0;
+let currentP = 0;
 let numCorrect = 0;
 
 /*----- cached element references -----*/
@@ -123,34 +133,47 @@ document.getElementById('replay').addEventListener('click', replayGame);
  once i click the start button and then have each question toggle in and out of view*/
 //html radio buttons?
 
- function buildQuiz() {
-        const output = [];
-    dinosaurs.forEach( (currentQuestion, questionIdx) => {
-        const answers = [];
-      for (letter in currentQuestion.answers) {
-        answers.push(
-          `<label>
-            <input type="radio" name="question${questionIdx}" value="${letter}">
-            ${letter} :
-            ${currentQuestion.answers[letter]}
-          </label>`
-        );
-    }
-        output.push(
-            `div class="question"> ${currentQuestion.question}</div>
-            <div class="answers"> ${answers.join("")} </div>`
-        );
-    });
-        quizContainer.innerHTML = output.join("");
-};
+//  function buildQuiz() {
+//         const output = [];
+//     dinosaurs.forEach( (currentQuestion, questionIdx) => {
+//         const answers = [];
+//       for (letter in currentQuestion.answers) {
+//         answers.push(
+//           `<label>
+//             <input type="radio" name="question${questionIdx}" value="${letter}">
+//             ${letter} :
+//             ${currentQuestion.answers[letter]}
+//           </label>`
+//         );
+//     }
+//         output.push(
+//             `div class="question"> ${currentQuestion.question}</div>
+//             <div class="answers"> ${answers.join("")} </div>`
+//         );
+//     });
+//         quizContainer.innerHTML = output.join("");
+// };
 
+function makeList() {
+    for (i = 0; i < 10; i++)
+    dinosaurs.push(i);
+}
 
-function startGame(evt) {
-    let sections = document.querySelectorAll('.questions');
-    // sections['div1'...'div10'];
-    // section[currentQuestion];
-    //div1 display = row or flex;
-};
+// sections['div1'...'div10'];
+// section[currentPage/Question];
+//div1 display = row or flex;
+
+window.addEventListener('load', loadHome);
+
+function loadHome() {
+    let home = document.getElementById('home');
+
+}
+
+function startGame() {
+    makeList()
+}
+
 function nextQuestion(evt) {
     console.log(evt);
 };
