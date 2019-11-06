@@ -121,7 +121,7 @@ let answers = document.getElementById('answers');
 let replay = document.getElementById('replay');
 let home = document.getElementById('home');
 let quiz = document.getElementById('quiz-container');
-let slide1 = document.querySelector('.stegosaurus');
+let slide1 = document.getElementById('stegosaurus');
 
 
 // let answersContainer = quizContainer.querySelectorAll('.answers');
@@ -135,7 +135,7 @@ submit.addEventListener('click', submitAnswers);
 answers.addEventListener('click', viewAnswers);
 replay.addEventListener('click', replayGame);
 
-
+window.addEventListener('load', landingPage);
 
 /*----- functions -----*/
 
@@ -170,10 +170,17 @@ replay.addEventListener('click', replayGame);
                     
                     
 //from home page, where nothing but home info is displayed, when user clicks start game, the first dinosaur will appear
-                    
+   
+
+
+function landingPage () {
+    home.style.display = 'block';
+    slide1.style.display = 'none';
+};
+
 function startGame() {
     home.style.display = 'none'; 
-    quiz.style.display = 'block';
+    slide1.style.display = 'block';
     start.style.display = 'none';
     previous.style.display = 'none';
     submit.style.display = 'none'; 
