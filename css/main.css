@@ -31,7 +31,19 @@ p {
 
 } */
 
-#quiz {
+#quiz-container {
+    display: none;
+}
+
+.stegosaurus {
+    display: block;
+}
+
+.tyrannosaurus {
+    display: none;
+}
+
+.apatosaurus {
     display: none;
 }
 
@@ -41,5 +53,10 @@ p {
 
 #start {
     font-size: 20px;
+    text-align: center;
+}
+
+input {
+    display: flex;
     text-align: center;
 }

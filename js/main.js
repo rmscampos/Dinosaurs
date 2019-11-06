@@ -113,15 +113,18 @@ let currentP = 0;
 let numCorrect = 0;
 
 /*----- cached element references -----*/
-
 let start = document.getElementById('start');
 let next = document.getElementById('next');
 let previous = document.getElementById('previous');
 let submit = document.getElementById('finish');
 let answers = document.getElementById('answers');
 let replay = document.getElementById('replay');
+let home = document.getElementById('home');
+let quiz = document.getElementById('quiz-container');
+let slide1 = document.querySelector('.stegosaurus');
 
-let answersContainer = quizContainer.querySelectorAll('.answers');
+
+// let answersContainer = quizContainer.querySelectorAll('.answers');
 
 /*----- event listeners -----*/
 
@@ -133,52 +136,51 @@ answers.addEventListener('click', viewAnswers);
 replay.addEventListener('click', replayGame);
 
 
+
 /*----- functions -----*/
 
 
 //  function buildQuiz() {
-//         const output = [];
-//     dinosaurs.forEach( (currentQuestion, questionIdx) => {
-//         const answers = [];
-//       for (letter in currentQuestion.answers) {
-//         answers.push(
-//           `<label>
-//             <input type="radio" name="question${questionIdx}" value="${letter}">
-//             ${letter} :
-//             ${currentQuestion.answers[letter]}
-//           </label>`
-//         );
-//     }
-//         output.push(
-//             `div class="question"> ${currentQuestion.question}</div>
-//             <div class="answers"> ${answers.join("")} </div>`
-//         );
-//     });
-//         quizContainer.innerHTML = output.join("");
-// };
-
-
-
-// sections['div1'...'div10'];
-// section[currentPage/Question];
-//each dino div display = block;
-
-let home = document.getElementById('home');
-let quiz = document.getElementById('quiz');
-
+    //         const output = [];
+    //     dinosaurs.forEach( (currentQuestion, questionIdx) => {
+        //         const answers = [];
+        //       for (letter in currentQuestion.answers) {
+            //         answers.push(
+                //           `<label>
+                //             <input type="radio" name="question${questionIdx}" value="${letter}">
+                //             ${letter} :
+                //             ${currentQuestion.answers[letter]}
+                //           </label>`
+                //         );
+                //     }
+                //         output.push(
+                    //             `div class="question"> ${currentQuestion.question}</div>
+                    //             <div class="answers"> ${answers.join("")} </div>`
+                    //         );
+                    //     });
+                    //         quizContainer.innerHTML = output.join("");
+                    // };
+                    
+                    
+                    
+                    // sections['div1'...'div10'];
+                    // section[currentPage/Question];
+                    //each dino div display = block;
+                    
+                    
+                    
 //from home page, where nothing but home info is displayed, when user clicks start game, the first dinosaur will appear
-//display: none on start, previous, submit, answers, and replay
-
+                    
 function startGame() {
-    quiz.style.display = 'block';
     home.style.display = 'none'; 
+    quiz.style.display = 'block';
     start.style.display = 'none';
     previous.style.display = 'none';
-    submit.style.display = 'none';
+    submit.style.display = 'none'; 
     answers.style.display = 'none';
     replay.style.display = 'none';
-}
-
+};
+                                
 function nextQuestion(evt) {
     console.log(evt);
 };
