@@ -31,21 +31,19 @@ p {
 
 } */
 
-/* #quiz-container {
-    display: none;
-    border: 1px solid red;
-} */
-
-/* #stegosaurus {
-    display: block;
-    
-} */
-
-#tyrannosaurus {
+.quiz-container {
     display: none;
 }
 
-#apatosaurus {
+.stegosaurus {
+    display: none;
+}
+
+.tyrannosaurus {
+    display: none;
+}
+
+.apatosaurus {
     display: none;
 }
 

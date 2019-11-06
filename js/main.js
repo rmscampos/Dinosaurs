@@ -120,8 +120,8 @@ let submit = document.getElementById('finish');
 let answers = document.getElementById('answers');
 let replay = document.getElementById('replay');
 let home = document.getElementById('home');
-let quiz = document.getElementById('quiz-container');
-let slide1 = document.getElementById('stegosaurus');
+let quiz = document.querySelectorAll('.quiz-container');
+let slide1 = document.querySelector('.stegosaurus');
 
 
 // let answersContainer = quizContainer.querySelectorAll('.answers');
@@ -175,6 +175,7 @@ window.addEventListener('load', landingPage);
 
 function landingPage () {
     home.style.display = 'block';
+    quiz.style.display = 'none';
     slide1.style.display = 'none';
 };
 
