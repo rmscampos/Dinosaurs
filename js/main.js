@@ -114,24 +114,27 @@ let numCorrect = 0;
 
 /*----- cached element references -----*/
 
-// const startButton = document.getElementById('start');
+let start = document.getElementById('start');
+let next = document.getElementById('next');
+let previous = document.getElementById('previous');
+let submit = document.getElementById('finish');
+let answers = document.getElementById('answers');
+let replay = document.getElementById('replay');
 
+let answersContainer = quizContainer.querySelectorAll('.answers');
 
 /*----- event listeners -----*/
 
-document.getElementById('start').addEventListener('click', startGame);
-document.getElementById('next').addEventListener('click', nextQuestion);
-document.getElementById('previous').addEventListener('click', previousQuestion);
-document.getElementById('finish').addEventListener('click', submitAnswers);
-document.getElementById('answers').addEventListener('click', viewAnswers);
-document.getElementById('replay').addEventListener('click', replayGame);
-
+start.addEventListener('click', startGame);
+next.addEventListener('click', nextQuestion);
+previous.addEventListener('click', previousQuestion);
+submit.addEventListener('click', submitAnswers);
+answers.addEventListener('click', viewAnswers);
+replay.addEventListener('click', replayGame);
 
 
 /*----- functions -----*/
-/* to build quiz, i need to display the whole dinosaur array 
- once i click the start button and then have each question toggle in and out of view*/
-//html radio buttons?
+
 
 //  function buildQuiz() {
 //         const output = [];
@@ -154,24 +157,26 @@ document.getElementById('replay').addEventListener('click', replayGame);
 //         quizContainer.innerHTML = output.join("");
 // };
 
-function makeList() {
-    for (i = 0; i < 10; i++)
-    dinosaurs.push(i);
-}
+
 
 // sections['div1'...'div10'];
 // section[currentPage/Question];
-//div1 display = row or flex;
+//each dino div display = block;
 
-window.addEventListener('load', loadHome);
+let home = document.getElementById('home');
+let quiz = document.getElementById('quiz');
 
-function loadHome() {
-    let home = document.getElementById('home');
-
-}
+//from home page, where nothing but home info is displayed, when user clicks start game, the first dinosaur will appear
+//display: none on start, previous, submit, answers, and replay
 
 function startGame() {
-    makeList()
+    quiz.style.display = 'block';
+    home.style.display = 'none'; 
+    start.style.display = 'none';
+    previous.style.display = 'none';
+    submit.style.display = 'none';
+    answers.style.display = 'none';
+    replay.style.display = 'none';
 }
 
 function nextQuestion(evt) {
