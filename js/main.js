@@ -36,7 +36,7 @@ let dinosaurs = [
             b: 'Cretaceous',  
             c: 'Triassic'
         },   
-        correctAnswer: 'c'
+        correctAnswer: 'a'
     },
     { 
         dinosaur: 'Procompsognathus',
@@ -54,7 +54,7 @@ let dinosaurs = [
             b: 'Cretaceous',  
             c: 'Triassic'
         },   
-        correctAnswer: 'b'
+        correctAnswer: 'a'
     },
     { 
         dinosaur: 'Velociraptor',
@@ -76,12 +76,8 @@ let dinosaurs = [
     },
     { 
         dinosaur: 'Triceratops',
-        answers: { 
-            a: 'Jurassic', 
-            b: 'Cretaceous',  
-            c: 'Triassic'
-        },
-        correctAnswer: 'c'
+        answers: ['Jurassic', 'Cretaceous', 'Triassic'],
+        correctAnswer: 'Cretaceous'
     },
     { 
         dinosaur: 'Anklyosaurus',
@@ -90,7 +86,7 @@ let dinosaurs = [
             b: 'Cretaceous',  
             c: 'Triassic'
         },
-        correctAnswer: 'c'
+        correctAnswer: 'a'
     },
     { 
         dinosaur: 'Iguanodon',
