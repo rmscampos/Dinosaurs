@@ -1,35 +1,42 @@
-h1 {
-    text-align: center;
+/* @font-face {
+    font-family: 'dinosaurregular';
+    src: url('dinosaur-webfont.woff2') format('woff2'),
+         url('dinosaur-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+} */
+
+#home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-h2 {
-    text-align: center;
-}
 
-h3 {
-    text-align: center;
-}
-img {
-    width: 350px;
-    height: 300px;
-}
 
-/* #bg {
-    position: fixed; 
-    top: 0; 
-    left: 0; 
-    min-width: 100%;
-    min-height: 100%;
-    opacity: .5;
-  } */
+html { 
+    background: url(https://i.imgur.com/YH4Ghxf.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
 
 p {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    height: 200px;
+    width: 600px;
     text-align: center;
+    background-color: rgb(169, 169, 169, .7);
 }
 
- #home {
+ /* #home {
     display: block;
-}
+} */
 
 /* .quiz-container {
     display: '';
@@ -52,9 +59,76 @@ p {
     display: none;
 } */
 
+
 #start {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh; 
+    width: 30vh;
+    font-size: 5vh;
+    text-align: center;
+    background-color: darkolivegreen;
+    border: 5px solid black;
+    border-radius: 4%;
+}
+
+#next {
+    display: flex;
     font-size: 20px;
     text-align: center;
+    background-color: darkolivegreen;
+    border: 5px solid black;
+    border-radius: 4%;
+    
+} 
+
+#previous {
+    display: flex;
+    
+    font-size: 20px;
+    text-align: center;
+    background-color: darkolivegreen;
+    border: 5px solid black;
+    border-radius: 4%;
+    
+}
+
+#submit {
+    display: flex;
+    font-size: 20px;
+    text-align: center;
+    background-color: darkolivegreen;
+    border: 5px solid black;
+    border-radius: 4%;
+    
+}
+
+#answers {
+    display: flex;
+    font-size: 20px;
+    text-align: center;
+    background-color: darkolivegreen;
+    border: 5px solid black;
+    border-radius: 4%;
+    
+}
+
+#replay {
+    display: flex;
+    font-size: 20px;
+    text-align: center;
+    background-color: darkolivegreen;
+    border: 5px solid #000000;
+    border-radius: 4%;
+    
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: auto;
 }
 
 input {

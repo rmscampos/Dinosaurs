@@ -4,7 +4,7 @@
 //will keep track of the items to diaply on the current page only
 let pageList = [];
 //where we are in the pagination
-let currentPage = 1;
+let currentPage = 0;
 //amount of objects per page
 let numberPerPage = 1;
 
@@ -23,18 +23,18 @@ let dinosaurs = [
     { 
         dinosaur: 'Tyrannosaurus Rex',
         answers: { 
-            a: 'Triassic', 
+            a: 'Jurassic', 
             b: 'Cretaceous',  
-            c: 'Jurassic'
+            c: 'Triassic'
         },   
         correctAnswer: 'b'
     },
     { 
         dinosaur: 'Apatosaurus',
         answers: { 
-            a: 'Cretaceous', 
-            b: 'Triassic',  
-            c: 'Jurassic'
+            a: 'Jurassic', 
+            b: 'Cretaceous',  
+            c: 'Triassic'
         },   
         correctAnswer: 'c'
     },
@@ -50,9 +50,9 @@ let dinosaurs = [
     { 
         dinosaur: 'Brachiosaurus',
         answers: { 
-            a: 'Triassic', 
-            b: 'Jurassic',  
-            c: 'Cretaceous'
+            a: 'Jurassic', 
+            b: 'Cretaceous',  
+            c: 'Triassic'
         },   
         correctAnswer: 'b'
     },
@@ -68,8 +68,8 @@ let dinosaurs = [
     { 
         dinosaur: 'Eoraptor',
         answers: { 
-            a: 'Cretaceous', 
-            b: 'Jurassic',  
+            a: 'Jurassic', 
+            b: 'Cretaceous',  
             c: 'Triassic'
         },   
         correctAnswer: 'c'
@@ -77,28 +77,28 @@ let dinosaurs = [
     { 
         dinosaur: 'Triceratops',
         answers: { 
-        a: 'Jurassic', 
-        b: 'Triassic',  
-        c: 'Cretaceous'
-        },   
+            a: 'Jurassic', 
+            b: 'Cretaceous',  
+            c: 'Triassic'
+        },
         correctAnswer: 'c'
     },
     { 
         dinosaur: 'Anklyosaurus',
         answers: { 
-        a: 'Triassic', 
-        b: 'Cretaceous',  
-        c: 'Jurassic'
-        },   
+            a: 'Jurassic', 
+            b: 'Cretaceous',  
+            c: 'Triassic'
+        },
         correctAnswer: 'c'
     },
     { 
         dinosaur: 'Iguanodon',
         answers: { 
-        a: 'Jurassic', 
-        b: 'Cretaceous',  
-        c: 'Triassic'
-        },   
+            a: 'Jurassic', 
+            b: 'Cretaceous',  
+            c: 'Triassic'
+        },
         correctAnswer: 'b'
     },
 ];
@@ -106,23 +106,23 @@ let dinosaurs = [
 
 /*----- app's state (variables) -----*/
 
-//timer
 //score (const scorePercent = Math.round(100 * score/questions.length)
 
-let currentP = 0;
 let numCorrect = 0;
 
 /*----- cached element references -----*/
+let dinoType = document.querySelector('.dinotype');
+
 let start = document.getElementById('start');
 let next = document.getElementById('next');
 let previous = document.getElementById('previous');
-let submit = document.getElementById('finish');
+let submit = document.getElementById('submit');
 let answers = document.getElementById('answers');
 let replay = document.getElementById('replay');
 
+let home = document.getElementById('home');
+let quiz = document.getElementById('quiz-container');
 
-let quiz = document.querySelectorAll('.quiz-container');
-let slide1 = document.querySelector('.stegosaurus');
 
 
 // let answersContainer = quizContainer.querySelectorAll('.answers');
@@ -136,56 +136,40 @@ submit.addEventListener('click', submitAnswers);
 answers.addEventListener('click', viewAnswers);
 replay.addEventListener('click', replayGame);
 
-window.addEventListener('load', toggleHome);
+window.addEventListener('load', landingPage);
 
 /*----- functions -----*/
               
                     
-// sections['div1'...'div10'];
 // section[currentPage/Question];
 //each dino div display = block;
 //from home page, where nothing but home info is displayed, when user clicks start game, the first dinosaur will appear
                     
-                    
- //tried to refactor as a toggle function for eeach element?   
-function toggleHome(on) {
-    let home = document.getElementById('home');
-    home.style['display'] = on ? 'block' : 'none';
-};
-
-toggleHome(true);
-toggleHome(false);
-
-
-//tried to turn off each cached element of the things I didn’t want displayed
-
+                
 function landingPage () {
-    home.style.display = 'block';
     quiz.style.display = 'none';
-    slide1.style.display = 'none';
+    next.style.display = 'none';
+    previous.style.display = 'none';
+    submit.style.display = 'none';
+    answers.style.display = 'none';
+    replay.style.display = 'none';
 };
 
-//attempt at refactoring but ended up having to list everything out again
-//this is where i realized that i didn’t know how i should set the class property in css so that the css in js affected it? 
+
+
+// function updatePage() {
+//     let currentDino = dinosaurs[currentPage];
+//     dinoType.innerHTML = currentDino.dinosaur;
+// }
+
                                                              
 function startGame() {
-        if (slide1.style.display === 'none') {
-        slide1.style.display = 'block';
-    } else {
-        home.style.display = 'none';
-        start.style.display = 'none';
-        previous.style.display = 'none';
-        submit.style.display = 'none';
-        answers.style.display = 'none';
-        replay.style.display = 'none';
-    }
-}
-
-//same thing as the landingPage function where I am just ‘hiding’ every element one by one, but I would have to do it for every slide 
-
-function startGame() {
+    let currentDino = dinosaurs[currentPage];
+        console.log(currentDino);
+    dinoType.innerHTML = currentDino.dinosaur;
+    quiz.style.display = 'block';
+    next.style.display = 'block';
     home.style.display = 'none'; 
-    slide1.style.display = 'block';
     start.style.display = 'none';
     previous.style.display = 'none';
     submit.style.display = 'none'; 
@@ -195,9 +179,22 @@ function startGame() {
 
 
                                 
-function nextQuestion(evt) {
-    console.log(evt);
+function nextQuestion() {
+    let answer = document.querySelector('input[name="choice"]:checked').value;
+    console.log(answer);
+    if (answer === dinosaurs[currentPage].correctAnswer) {
+        console.log('it is right');
+        //correct, add to score, etc
+    } else {
+        console.log('you wrong');
+        //not correct
+    }
+    // go to next dino
+    currentPage += 1;
+    // updatePage();
 };
+
+
 function previousQuestion(evt) {
     console.log(evt);
 };
@@ -207,9 +204,12 @@ function submitAnswers(evt) {
 function viewAnswers(evt) {
     const answersContainer = quizContainer.querySelectorAll(".answers");
 };
+
+
 function replayGame(evt) {
-    console.log(evt);
+    window.location.reload(true);
 };
+
 
 //add correct answer to tally
 // if (userAnswer === currentQuestion.correctAnswer) {

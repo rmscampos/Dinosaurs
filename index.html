@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Dinosaur Quiz</title>
     <link rel="stylesheet" href='css/main.css'> 
+    <!-- <link rel="stylesheet" href="css/stylesheet.css" type="text/css" charset="utf-8" /> -->
     <script defer src='js/main.js'></script>
 </head>
 <body>
@@ -13,22 +14,20 @@
         <h1>Dinosaur Quiz</h1>
         <h2>Quote.</h2>
         <h3>Instructions</h3>
-            <p>Test your knowledge of dinosaurs and choose which <b>geologic period</b> each dinosaur displayed lived in!</p>
+        <p>Test your knowledge of dinosaurs and choose which <b>geologic period</b> each dinosaur displayed lived in!</p>
     </div> 
-    <!-- <div id='bg'>
-        <img src='assets/Dino Images/dinohome.jpg' id='bg' alt="We've got a t-rex."/>
-    </div> -->
-    <div class='quiz-container'>
-        <div class='stegosaurus'>
-            <h3 class='dinotype'>Stegosaurus</h1>
-            <input type='radio' id='jurassic' value='jurassic'>
+    <div id='quiz-container'>
+        <div class='dino'>
+            <h3 class='dinotype'></h3>
+            <input type='radio' id='jurassic' name='choice' value='a'>
             <label='jurassic'>Jurassic</label>
-            <input type='radio' id='cretaceous' value='cretaceous'>
+            <input type='radio' id='cretaceous' name='choice' value='b'>
             <label='cretaceous'>Cretaceous</label>
-            <input type='radio' id='triassic' value='triassic'>
+            <input type='radio' id='triassic' name='choice' value='c'>
             <label='triassic'>Triassic</label>
-        </div>
-        <div class='tyrannosaurus'>
+        </div> 
+    </div>
+        <!-- <div class='tyrannosaurus'>
             <h3 class='dinotype'>Tyrannosaurus Rex</h3>
             <input type='radio' id='triassic' value='triassic'>
             <label='triassic'>Triassic</label>
@@ -46,7 +45,7 @@
             <input type='radio' id='jurassic' value='jurassic'>
             <label='jurassic'>Jurassic</label>
         </div>
-    </div>
+    </div> -->
         <!-- <p class='questions' id='procompy'>Procompsognathus/p>
         <div4>
             <input type='radio' id='jurassic' value='jurassic'>
@@ -111,12 +110,13 @@
             <label='triassic'>Triassic</label>
         </div10> --> 
     
-
-    <button id='start'>Start!</button>
+<div class='button'>
+    <button id='start'>START!</button>
     <button id='next'>Next</button>
     <button id='previous'>Previous</button>
-    <button id='finish'>Submit Answers!</button>
+    <button id='submit'>Submit Answers!</button>
     <button id='answers'>View Answers</button>
     <button id='replay'>Replay</button>
+</div>
 </body>
 </html>
