@@ -27,25 +27,26 @@ p {
     text-align: center;
 }
 
-/* #home {
+ #home {
+    display: block;
+}
 
-} */
-
-.quiz-container {
-    display: none;
+/* .quiz-container {
+    display: '';
+    border: 1px solid red;
 }
 
 .stegosaurus {
-    display: none;
-}
+    display: block;
+} 
 
 .tyrannosaurus {
-    display: none;
+    display: block;
 }
 
 .apatosaurus {
-    display: none;
-}
+    display: block;
+} */ 
 
 /* .questions {
     display: none;
