@@ -34,32 +34,7 @@ p {
     background-color: rgb(169, 169, 169, .7);
 }
 
- /* #home {
-    display: block;
-} */
-
-/* .quiz-container {
-    display: '';
-    border: 1px solid red;
-}
-
-.stegosaurus {
-    display: block;
-} 
-
-.tyrannosaurus {
-    display: block;
-}
-
-.apatosaurus {
-    display: block;
-} */ 
-
-/* .questions {
-    display: none;
-} */
-
-
+ 
 #start {
     display: flex;
     justify-content: center;
