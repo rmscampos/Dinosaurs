@@ -104,8 +104,6 @@ function landingPage () {
     replay.style.display = 'none';
 };
 
-
-
                                                              
 function startGame() {
     quiz.style.display = 'block';
@@ -118,13 +116,12 @@ function startGame() {
     replay.style.display = 'none';
 };
 
-
-//how to randomize dinos
-//shuffle array function from aditi is a common array iterator pattern for that -- memorize!
 function updatePage() {
-    let currentDino = dinosaurs[currentIdx];
-    dinoType.innerHTML = currentDino.dinosaur;
+        let currentDino = dinosaurs[currentIdx];
+        dinoType.innerHTML = currentDino.dinosaur;
+        previous.style.display = 'block';
 };
+
                         
 function nextQuestion() {
     let answer = document.querySelector('input[name="choice"]:checked').value;
@@ -134,14 +131,23 @@ function nextQuestion() {
         updatePage();
         answersContainer.push(dinosaurs.correctAnswer);
     } else {
-        var snd = new Audio ('');
-        snd.play();
-        alert('Wrongo! Guess again!');
+        currentIdx += 1;
+        updatePage();
     }
     
     };
 
-function submitAnswers(evt) {
+    function shuffle(dinosaurs) {
+    for (let i = dinosaurs.length - 1; i > 0; i--) {
+      let j = Math.floor(Math.random() * i);
+      let temp = dinosaurs[i];
+      dinosaurs[i] = dinosaurs[j];
+      dinosaurs[j] = temp;
+    }
+    return dinosaurs;
+  }
+
+  function submitAnswers(evt) {
     console.log(evt);
 };
 

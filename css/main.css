@@ -7,6 +7,10 @@
 
 } */
 
+*{
+    box-sizing: border-box;
+}
+
 #home {
     display: flex;
     flex-direction: column;
@@ -34,8 +38,8 @@ p {
     width: 400px;
     text-align: center;
     background-color: rgb(169, 169, 169, .8);
-    padding-top: 25px;
-    margin-top: x;
+    padding-top: 15px;
+    margin-top: 20px;
     border-radius: 5%;
 }
 
@@ -65,7 +69,6 @@ p {
 
 #previous {
     display: flex;
-    
     font-size: 20px;
     text-align: center;
     background-color: darkolivegreen;
@@ -104,13 +107,16 @@ p {
     
 }
 
+button:hover {
+    opacity: 0.7;
+}
 
-//add hover on buttons
 .button {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: auto;
+    margin-top: 100px;
+    
 }
 
 input {
