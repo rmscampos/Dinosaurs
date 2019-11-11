@@ -49,6 +49,9 @@ p {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    color: black;
+    font-size: 5vh;
+    font-weight: bold;
 }
 
 
@@ -74,6 +77,8 @@ p {
     width: 30vh;
     background:rgb(169, 169, 169, .8);
     color: black;
+    border: 3px solid black;
+    border-radius: 4%;
     font-size: 5vh;
   }
 
@@ -81,7 +86,7 @@ p {
     display: flex;
     font-size: 20px;
     text-align: center;
-    background-color: darkolivegreen;
+    background-color: rgb(107, 47, 104);
     border: 5px solid black;
     border-radius: 4%;
     

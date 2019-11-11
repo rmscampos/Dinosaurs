@@ -148,18 +148,21 @@ function updatePage() {
     
     
 function nextQuestion() {
-    let answer = document.querySelector('input[name="choice"]:checked').value;
-        console.log(answer);
+    let answer = document.querySelector('input[name="choice"]:checked').value;   
     if (answer === dinosaurs[currentIdx].correctAnswer) {
             currentIdx += 1;
             updatePage();
             answersContainer.push(dinosaurs.correctAnswer);
-    } else {
+        } else {
         currentIdx += 1;
         updatePage();
-    }
-    
+        }
+    let clearButton = document.getElementsByName('choice');
+        for (var i=  0; i < clearButton.length; i++)
+        clearButton[i].checked = false;
     };
+
+    
 
     function shuffle(dinosaurs) {
     for (let i = dinosaurs.length - 1; i > 0; i--) {
