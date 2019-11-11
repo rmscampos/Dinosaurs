@@ -67,6 +67,8 @@ var numCorrect = 0;
 
 /*----- cached element references -----*/
 
+let clock = document.querySelector(".clock");
+
 let dinoType = document.querySelector('.dinotype');
 
 let start = document.getElementById('start');
@@ -109,6 +111,7 @@ function landingPage () {
 function startGame() {
     quiz.style.display = 'block';
     next.style.display = 'block';
+    clock.style.display = 'block';
     home.style.display = 'none'; 
     start.style.display = 'none';
     previous.style.display = 'none';
@@ -116,6 +119,26 @@ function startGame() {
     answers.style.display = 'none';
     replay.style.display = 'none';
 };
+
+function startTimer() {
+    let min = 2
+    let sec = 00;
+    let timer = setInterval(function(){
+        document.querySelector('.clock').innerHTML='00:'+sec;
+        sec--;
+        if (sec < 0) {
+            clearInterval(timer);
+        }
+    }, 1000);
+}
+
+window.onload = function () {
+    let time = 120
+        display = document.querySelector('.clock');
+    startTimer(time, display);
+};
+
+
 
 function updatePage() {
         let currentDino = dinosaurs[currentIdx];
