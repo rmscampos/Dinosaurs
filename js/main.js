@@ -157,9 +157,9 @@ function nextQuestion() {
         currentIdx += 1;
         updatePage();
         }
-    let clearButton = document.getElementsByName('choice');
-        for (var i=  0; i < clearButton.length; i++)
-        clearButton[i].checked = false;
+    let clearChoice = document.getElementsByName('choice');
+        for (var i=  0; i < clearChoice.length; i++)
+        clearChoice[i].checked = false;
     };
 
     
