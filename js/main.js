@@ -1,10 +1,10 @@
 /*----- constants -----*/
 
-let answersContainer = [];
-let currentIdx = 0;
+var answersContainer = [];
+var currentIdx = 0;
 // let numberPerPage = 1;
 
-let dinosaurs = [
+const dinosaurs = [
     { 
         image: './assets/dinoimages/stego.png',
         dinosaur: 'Stegosaurus',
@@ -63,7 +63,7 @@ let dinosaurs = [
 
 /*----- app's state (variables) -----*/
 
-let numCorrect = 0;
+var numCorrect = 0;
 
 /*----- cached element references -----*/
 
@@ -78,7 +78,7 @@ let replay = document.getElementById('replay');
 
 let home = document.getElementById('home');
 let quiz = document.getElementById('quiz-container');
-let input = document.getElementsByTagName('input');
+// let input = document.getElementsByTagName('input');
 
 // let answersContainer = dinosaurs.correctAnswer;
 
@@ -121,19 +121,16 @@ function updatePage() {
         let currentDino = dinosaurs[currentIdx];
         dinoType.innerHTML = currentDino.dinosaur;
         previous.style.display = 'block';
-        // input.removeAttr('checked');
-};
-
-                        
+    };
+    
+    
 function nextQuestion() {
     let answer = document.querySelector('input[name="choice"]:checked').value;
-    console.log(answer);
+        console.log(answer);
     if (answer === dinosaurs[currentIdx].correctAnswer) {
-        currentIdx += 1;
-        updatePage();
-        answersContainer.push(dinosaurs.correctAnswer);
-        
-
+            currentIdx += 1;
+            updatePage();
+            answersContainer.push(dinosaurs.correctAnswer);
     } else {
         currentIdx += 1;
         updatePage();
