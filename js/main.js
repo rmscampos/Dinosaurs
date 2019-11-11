@@ -78,6 +78,7 @@ let replay = document.getElementById('replay');
 
 let home = document.getElementById('home');
 let quiz = document.getElementById('quiz-container');
+let input = document.getElementsByTagName('input');
 
 // let answersContainer = dinosaurs.correctAnswer;
 
@@ -120,6 +121,7 @@ function updatePage() {
         let currentDino = dinosaurs[currentIdx];
         dinoType.innerHTML = currentDino.dinosaur;
         previous.style.display = 'block';
+        // input.removeAttr('checked');
 };
 
                         
@@ -130,6 +132,8 @@ function nextQuestion() {
         currentIdx += 1;
         updatePage();
         answersContainer.push(dinosaurs.correctAnswer);
+        
+
     } else {
         currentIdx += 1;
         updatePage();

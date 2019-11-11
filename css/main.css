@@ -7,7 +7,7 @@
 
 } */
 
-*{
+* {
     box-sizing: border-box;
 }
 
@@ -44,6 +44,15 @@ p {
 }
 
  
+.dino {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
 #start {
     display: flex;
     justify-content: center;
@@ -119,7 +128,8 @@ button:hover {
     
 }
 
-input {
+input[type='radio'] {
     display: flex;
-    text-align: center;
+    align-items: left;
+
 }
