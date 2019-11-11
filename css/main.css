@@ -1,7 +1,7 @@
 /* @font-face {
     font-family: 'dinosaurregular';
-    src: url('dinosaur-webfont.woff2') format('woff2'),
-         url('dinosaur-webfont.woff') format('woff');
+    src: url('/css/Dino\ Font\ WebKit/dinosaur-webfont.woff2') format('woff2'),
+         url('/css/Dino\ Font\ WebKit/dinosaur-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
@@ -24,14 +24,19 @@ html {
     background-size: cover;
   }
 
+
 p {
-    color: white;
+    color: darkolivegreen;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
-    height: 200px;
-    width: 600px;
+    font-weight: bolder;
+    height: 100px;
+    width: 400px;
     text-align: center;
-    background-color: rgb(169, 169, 169, .7);
+    background-color: rgb(169, 169, 169, .8);
+    padding-top: 25px;
+    margin-top: x;
+    border-radius: 5%;
 }
 
  
@@ -99,6 +104,8 @@ p {
     
 }
 
+
+//add hover on buttons
 .button {
     display: flex;
     align-items: center;

@@ -118,6 +118,9 @@ function startGame() {
     replay.style.display = 'none';
 };
 
+
+//how to randomize dinos
+//shuffle array function from aditi is a common array iterator pattern for that -- memorize!
 function updatePage() {
     let currentDino = dinosaurs[currentIdx];
     dinoType.innerHTML = currentDino.dinosaur;
@@ -131,6 +134,8 @@ function nextQuestion() {
         updatePage();
         answersContainer.push(dinosaurs.correctAnswer);
     } else {
+        var snd = new Audio ('');
+        snd.play();
         alert('Wrongo! Guess again!');
     }
     
@@ -145,8 +150,8 @@ function viewAnswers() {
 };
 
 
-function replayGame() {
-    window.location.reload(true);
+function replayGame(evt) {
+    window.location.reload();
 };
 
 
