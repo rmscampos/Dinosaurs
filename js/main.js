@@ -132,13 +132,14 @@ function updatePage() {
     
     
 function nextQuestion() {
-    let answer = document.querySelector('input[name="choice"]:checked').value;   
+    let answer = document.querySelector('input[name="choice"]:checked').value;
+    
+    if (!answer) alert('Choose!');
+       
     if (answer === dinosaurs[currentIdx].correctAnswer) {
             currentIdx += 1;
             updatePage();
             answersContainer.push(dinosaurs.correctAnswer);
-        // } else if (answer.value === null) {
-        //     alert('Choose!');
         } else {
         currentIdx += 1;
         updatePage();

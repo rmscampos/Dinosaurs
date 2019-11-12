@@ -7,8 +7,10 @@
     <title>Dinosaur Quiz</title>
     <link rel="stylesheet" href='css/main.css'> 
     <link rel="stylesheet" href='css/jurassic park font webkit/stylesheet.css'> 
-
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <link rel="stylesheet" href="sweetalert2/dist/sweetalert2.min.css">
     <script defer src='js/main.js'></script>
+
 </head>
 <body>
     <div id='home'>
@@ -20,12 +22,18 @@
         <div class='dino'>
             <div id='dinoImg'></div>
             <h3 class='dinotype'></h3>
+            <div class='choice'>
             <input type='radio' id='jurassic' name='choice' value='Jurassic'>
             <label='jurassic'>Jurassic</label>
+            </div>
+            <div class='choice'>
             <input type='radio' id='cretaceous' name='choice' value='Cretaceous'>
             <label='cretaceous'>Cretaceous</label>
+            </div>
+            <div class='choice'>
             <input type='radio' id='triassic' name='choice' value='Triassic'>
             <label='triassic'>Triassic</label>
+             </div>
         </div> 
     
     </div>

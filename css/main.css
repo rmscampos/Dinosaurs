@@ -73,7 +73,10 @@ p {
     font-weight: lighter;
 }
 
-
+.choice {
+    display: flex;
+    flex-direction: row;
+}
 
 #start {
     display: flex;
