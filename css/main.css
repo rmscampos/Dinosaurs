@@ -1,5 +1,14 @@
 
 
+@font-face {
+    font-family: 'jurassic_parkregular';
+    src: url('jurassicpark-bl48-webfont.woff2') format('woff2'),
+         url('jurassicpark-bl48-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 * {
     box-sizing: border-box;
 }
@@ -21,9 +30,9 @@ html {
     background-size: cover;
   }
 
-/* h1 {
-    font-family: 'dinosaurregular', Arial, sans-serif;
-} */
+h1 {
+    font-family: 'jurassic_parkregular';
+}
 
 p {
     color: darkolivegreen;

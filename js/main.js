@@ -76,7 +76,7 @@ var numCorrect = 0;
 
 let dinoImg = document.getElementById('dinoImg');
 let dinoType = document.querySelector('.dinotype');
-
+let endImg = document.getElementById('endImg');
 let start = document.getElementById('start');
 let next = document.getElementById('next');
 let submit = document.getElementById('submit');
@@ -167,6 +167,7 @@ function nextQuestion() {
 
 
 function showResults() {
+        endImg.innerHTML = "<img src= 'assets/dinoimages/dinohome.jpg'/>";
         answers.style.display = 'block';
         submit.style.display = 'none';
         quiz.style.display = 'none';
