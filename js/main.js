@@ -17,54 +17,54 @@ const dinosaurs = [
         answers: ['Jurassic', 'Cretaceous', 'Triassic'],  
         correctAnswer: 'Cretaceous'
     },
-    // { 
-    //     image: 'assets/dinoimages/apatosaurus.png',
-    //     dinosaur: 'Apatosaurus',
-    //     answers: ['Jurassic', 'Cretaceous', 'Triassic'], 
-    //     correctAnswer: 'Jurassic'
-    // },
-    // { 
-    //     image: 'assets/dinoimages/procomsognathus.png',
-    //     dinosaur: 'Procompsognathus',
-    //     answers: ['Jurassic', 'Cretaceous', 'Triassic'],  
-    //     correctAnswer: 'Triassic'
-    // },
-    // { 
-    //     image: 'assets/dinoimages/brachiosaurus.png',
-    //     dinosaur: 'Brachiosaurus',
-    //     answers: ['Jurassic', 'Cretaceous', 'Triassic'],  
-    //     correctAnswer: 'Jurassic'
-    // },
-    // { 
-    //     image: 'assets/dinoimages/velociraptor.png',
-    //     dinosaur: 'Velociraptor',
-    //     answers: ['Jurassic', 'Cretaceous', 'Triassic'],   
-    //     correctAnswer: 'Cretaceous'
-    // },
-    // {   
-    //     image: 'assets/dinoimages/eoraptor.jpg',
-    //     dinosaur: 'Eoraptor',
-    //     answers: ['Jurassic', 'Cretaceous', 'Triassic'],  
-    //     correctAnswer: 'Eoraptor'
-    // },
-    // { 
-    //     image: 'assets/dinoimages/triceratops.jpeg',
-    //     dinosaur: 'Triceratops',
-    //     answers: ['Jurassic', 'Cretaceous', 'Triassic'],
-    //     correctAnswer: 'Cretaceous'
-    // },
-    // { 
-    //     image: 'assets/dinoimages/anklyosaurus.jpg',
-    //     dinosaur: 'Anklyosaurus',
-    //     answers: ['Jurassic', 'Cretaceous', 'Triassic'],
-    //     correctAnswer: 'Jurassic'
-    // },
-    // { 
-    //     image: 'assets/dinoimages/iguanodon.jpg',
-    //     dinosaur: 'Iguanodon',
-    //     answers: ['Jurassic', 'Cretaceous', 'Triassic'],
-    //     correctAnswer: 'Cretaceous'
-    // },
+    { 
+        image: 'assets/dinoimages/apatosaurus.png',
+        dinosaur: 'Apatosaurus',
+        answers: ['Jurassic', 'Cretaceous', 'Triassic'], 
+        correctAnswer: 'Jurassic'
+    },
+    { 
+        image: 'assets/dinoimages/procompsognathus.png',
+        dinosaur: 'Procompsognathus',
+        answers: ['Jurassic', 'Cretaceous', 'Triassic'],  
+        correctAnswer: 'Triassic'
+    },
+    { 
+        image: 'assets/dinoimages/brachiosaurus.png',
+        dinosaur: 'Brachiosaurus',
+        answers: ['Jurassic', 'Cretaceous', 'Triassic'],  
+        correctAnswer: 'Jurassic'
+    },
+    { 
+        image: 'assets/dinoimages/velociraptor.png',
+        dinosaur: 'Velociraptor',
+        answers: ['Jurassic', 'Cretaceous', 'Triassic'],   
+        correctAnswer: 'Cretaceous'
+    },
+    {   
+        image: 'assets/dinoimages/eoraptor.jpg',
+        dinosaur: 'Eoraptor',
+        answers: ['Jurassic', 'Cretaceous', 'Triassic'],  
+        correctAnswer: 'Eoraptor'
+    },
+    { 
+        image: 'assets/dinoimages/triceratops.jpeg',
+        dinosaur: 'Triceratops',
+        answers: ['Jurassic', 'Cretaceous', 'Triassic'],
+        correctAnswer: 'Cretaceous'
+    },
+    { 
+        image: 'assets/dinoimages/ankylosaurus.jpg',
+        dinosaur: 'Anklyosaurus',
+        answers: ['Jurassic', 'Cretaceous', 'Triassic'],
+        correctAnswer: 'Jurassic'
+    },
+    { 
+        image: 'assets/dinoimages/iguanodon.jpg',
+        dinosaur: 'Iguanodon',
+        answers: ['Jurassic', 'Cretaceous', 'Triassic'],
+        correctAnswer: 'Cretaceous'
+    },
 ];
 
 
