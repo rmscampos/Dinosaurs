@@ -7,15 +7,15 @@
     <title>Dinosaur Quiz</title>
     <link rel="stylesheet" href='css/main.css'> 
     <link rel="stylesheet" href='css/jurassic park font webkit/stylesheet.css'> 
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
-    <link rel="stylesheet" href="sweetalert2/dist/sweetalert2.min.css">
+    <!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <link rel="stylesheet" href="sweetalert2/dist/sweetalert2.min.css"> -->
     <script defer src='js/main.js'></script>
 
 </head>
 <body>
     <div id='home'>
         <h1>Dinosaur Quiz</h1>
-        <h2></h2>
+        <h2>Can I make a dinosaur quiz? You bet Jurassican!</h2>
         <p>Test your knowledge of dinosaurs and choose which geologic period each dinosaur displayed lived in!</p>
     </div> 
     <div id='quiz-container'>
@@ -42,7 +42,8 @@
 <div class='button'>
     <button id='start'>START!</button>
     <button id='next'>Next</button>
-    <button id='submit'>Submit!</button>
+    <button id='submit' value='PLAY' onclick='play()'>Submit!</button>
+    <audio id='audio' src='assets/TRex.wav'></audio>
     <button id='replay'>Replay</button>
 </div>
 </body>

@@ -132,9 +132,9 @@ function updatePage() {
     
     
 function nextQuestion() {
-    let answer = document.querySelector('input[name="choice"]:checked').value;
-    
-    if (!answer) alert('Choose!');
+    let answer = document.querySelector('input[name="choice"]:checked').value; 
+
+    // if (!answer) alert('Choose!');
        
     if (answer === dinosaurs[currentIdx].correctAnswer) {
             currentIdx += 1;
@@ -167,7 +167,13 @@ function nextQuestion() {
             };
 
 
+function play(){
+        let audio = document.getElementById('audio');
+        audio.play();
+};
+
 function showResults() {
+        audio.play();
         endImg.innerHTML = "<img src= 'assets/dinoimages/yeahdino.jpeg'/>";
         answers.style.display = 'block';
         submit.style.display = 'none';
@@ -181,4 +187,3 @@ function replayGame(evt) {
     window.location.reload();
 };
 
- 
