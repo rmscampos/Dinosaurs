@@ -6,65 +6,65 @@ var currentIdx = 0;
 
 const dinosaurs = [
     { 
-        image: './assets/dinoimages/stego.png',
+        image: 'assets/dinoimages/stego.png',
         dinosaur: 'Stegosaurus',
         answers: ['Jurassic', 'Cretaceous', 'Triassic'],
         correctAnswer: 'Jurassic'
         },   
     { 
-        image: './assets/dinoimages/trex.jpeg',
+        image: 'assets/dinoimages/trex.jpeg',
         dinosaur: 'Tyrannosaurus Rex',
         answers: ['Jurassic', 'Cretaceous', 'Triassic'],  
         correctAnswer: 'Cretaceous'
     },
-    { 
-        image: './assets/dinoimages/apatosaurus.png',
-        dinosaur: 'Apatosaurus',
-        answers: ['Jurassic', 'Cretaceous', 'Triassic'], 
-        correctAnswer: 'Jurassic'
-    },
-    { 
-        image: './assets/dinoimages/procomsognathus.png',
-        dinosaur: 'Procompsognathus',
-        answers: ['Jurassic', 'Cretaceous', 'Triassic'],  
-        correctAnswer: 'Triassic'
-    },
-    { 
-        image: './assets/dinoimages/brachiosaurus.png',
-        dinosaur: 'Brachiosaurus',
-        answers: ['Jurassic', 'Cretaceous', 'Triassic'],  
-        correctAnswer: 'Jurassic'
-    },
-    { 
-        image: './assets/dinoimages/velociraptor.png',
-        dinosaur: 'Velociraptor',
-        answers: ['Jurassic', 'Cretaceous', 'Triassic'],   
-        correctAnswer: 'Cretaceous'
-    },
-    {   
-        image: './assets/dinoimages/eoraptor.jpg',
-        dinosaur: 'Eoraptor',
-        answers: ['Jurassic', 'Cretaceous', 'Triassic'],  
-        correctAnswer: 'Eoraptor'
-    },
-    { 
-        image: './assets/dinoimages/triceratops.jpeg',
-        dinosaur: 'Triceratops',
-        answers: ['Jurassic', 'Cretaceous', 'Triassic'],
-        correctAnswer: 'Cretaceous'
-    },
-    { 
-        image: './assets/dinoimages/anklyosaurus.jpg',
-        dinosaur: 'Anklyosaurus',
-        answers: ['Jurassic', 'Cretaceous', 'Triassic'],
-        correctAnswer: 'Jurassic'
-    },
-    { 
-        image: './assets/dinoimages/iguanodon.jpg',
-        dinosaur: 'Iguanodon',
-        answers: ['Jurassic', 'Cretaceous', 'Triassic'],
-        correctAnswer: 'Cretaceous'
-    },
+    // { 
+    //     image: 'assets/dinoimages/apatosaurus.png',
+    //     dinosaur: 'Apatosaurus',
+    //     answers: ['Jurassic', 'Cretaceous', 'Triassic'], 
+    //     correctAnswer: 'Jurassic'
+    // },
+    // { 
+    //     image: 'assets/dinoimages/procomsognathus.png',
+    //     dinosaur: 'Procompsognathus',
+    //     answers: ['Jurassic', 'Cretaceous', 'Triassic'],  
+    //     correctAnswer: 'Triassic'
+    // },
+    // { 
+    //     image: 'assets/dinoimages/brachiosaurus.png',
+    //     dinosaur: 'Brachiosaurus',
+    //     answers: ['Jurassic', 'Cretaceous', 'Triassic'],  
+    //     correctAnswer: 'Jurassic'
+    // },
+    // { 
+    //     image: 'assets/dinoimages/velociraptor.png',
+    //     dinosaur: 'Velociraptor',
+    //     answers: ['Jurassic', 'Cretaceous', 'Triassic'],   
+    //     correctAnswer: 'Cretaceous'
+    // },
+    // {   
+    //     image: 'assets/dinoimages/eoraptor.jpg',
+    //     dinosaur: 'Eoraptor',
+    //     answers: ['Jurassic', 'Cretaceous', 'Triassic'],  
+    //     correctAnswer: 'Eoraptor'
+    // },
+    // { 
+    //     image: 'assets/dinoimages/triceratops.jpeg',
+    //     dinosaur: 'Triceratops',
+    //     answers: ['Jurassic', 'Cretaceous', 'Triassic'],
+    //     correctAnswer: 'Cretaceous'
+    // },
+    // { 
+    //     image: 'assets/dinoimages/anklyosaurus.jpg',
+    //     dinosaur: 'Anklyosaurus',
+    //     answers: ['Jurassic', 'Cretaceous', 'Triassic'],
+    //     correctAnswer: 'Jurassic'
+    // },
+    // { 
+    //     image: 'assets/dinoimages/iguanodon.jpg',
+    //     dinosaur: 'Iguanodon',
+    //     answers: ['Jurassic', 'Cretaceous', 'Triassic'],
+    //     correctAnswer: 'Cretaceous'
+    // },
 ];
 
 
@@ -97,7 +97,6 @@ let quiz = document.getElementById('quiz-container');
 start.addEventListener('click', startGame);
 next.addEventListener('click', nextQuestion);
 submit.addEventListener('click', showResults);
-// answers.addEventListener('click', viewAnswers);
 replay.addEventListener('click', replayGame);
 
 window.addEventListener('load', landingPage);
@@ -117,6 +116,7 @@ function landingPage () {
 
 function startGame() {
     shuffle(dinosaurs);
+    updatePage();
     quiz.style.display = 'block';
     next.style.display = 'block';
     clock.style.display = 'block';
@@ -152,7 +152,7 @@ function startTimer() {
     function updatePage() {
         let currentDino = dinosaurs[currentIdx];
         dinoType.innerHTML = currentDino.dinosaur;
-        dinoImg.innerHTML = "<img src='${currentDino.image}'>";
+        dinoImg.innerHTML = `<img src='${currentDino.image}'/>`;
         previous.style.display = 'block';
     };
     
@@ -171,7 +171,11 @@ function nextQuestion() {
         for (var i=  0; i < clearChoice.length; i++)
         clearChoice[i].checked = false;
         
-         
+    if (currentIdx === dinosaurs.length - 1) {
+            submit.style.display = 'block';
+            next.style.display = 'none';
+
+         }
     };
         
     function shuffle(array) {
@@ -186,12 +190,12 @@ function nextQuestion() {
 
 
 function showResults() {
-    if (answer === currentIdx.correctAnswer) {
-        numCorrect++;
-        answersContainer.innerHTML = numCorrect + ' out of ' + dinosaurs.length;
+        answers.style.display = 'block';
+        quiz.style.display = 'none';
+        answers.textContent = `You got ${answersContainer.length} out of ${dinosaurs.length} correct!`;
   };
 
-};
+
 function replayGame(evt) {
     window.location.reload();
 };
