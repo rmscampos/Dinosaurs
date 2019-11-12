@@ -32,18 +32,25 @@ html {
 
 h1 {
     font-family: 'jurassic_parkregular';
+    font-size: 200px;
+    font-weight: lighter;
+    letter-spacing: 15px;
+    margin-top: 25px;
+    margin-bottom: 50px;
+
 }
 
 p {
     color: darkolivegreen;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
+    font-size: 25px;
     font-weight: bolder;
-    height: 100px;
-    width: 400px;
+    letter-spacing: 2px;
+    height: 150px;
+    width: 500px;
     text-align: center;
     background-color: rgb(169, 169, 169, .8);
-    padding-top: 15px;
+    padding-top: 30px;
     margin-top: 20px;
     border-radius: 5%;
 }
@@ -60,9 +67,10 @@ p {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: black;
-    font-size: 5vh;
-    font-weight: bold;
+    font-family: 'jurassic_parkregular';
+    font-size: 60px;
+    letter-spacing: 10px;
+    font-weight: lighter;
 }
 
 
@@ -74,6 +82,7 @@ p {
     height: 10vh; 
     width: 30vh;
     font-size: 5vh;
+    letter-spacing: 5px;
     text-align: center;
     background-color: darkolivegreen;
     border: 5px solid black;
@@ -84,9 +93,12 @@ p {
 
 #next {
     display: flex;
-    font-size: 20px;
+    font-size: 5vh;
+    letter-spacing: 5px;
+    height: 10vh;
+    width: 30vh;
     text-align: center;
-    background-color: rgb(107, 47, 104);
+    background-color: darkolivegreen;
     border: 5px solid black;
     border-radius: 4%;
     
@@ -94,7 +106,10 @@ p {
 
 #submit {
     display: flex;
-    font-size: 20px;
+    font-size: 5vh;
+    letter-spacing: 5px;
+    height: 10vh;
+    width: 30vh;
     text-align: center;
     background-color: darkolivegreen;
     border: 5px solid black;
@@ -102,9 +117,18 @@ p {
     
 }
 
+
 #answers {
     display: flex;
-    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 600px;
+    padding-top: 25px;
+    margin-left: 325px;
+    font-family: 'jurassic_parkregular';
+    font-size: 50px;
+    letter-spacing: 5px;
     text-align: center;
     background-color: darkolivegreen;
     border: 5px solid black;
@@ -114,13 +138,26 @@ p {
 
 #replay {
     display: flex;
-    font-size: 20px;
+    font-size: 5vh;
+    letter-spacing: 5px;
+    height: 10vh;
+    width: 30vh;
+    margin-bottom: 50px;
     text-align: center;
-    background-color: darkolivegreen;
+    background-color: #e835a0;
     border: 5px solid #000000;
     border-radius: 4%;
     
 }
+
+#endImg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 75px;
+
+}
+
 
 img {
     display: flex;
@@ -130,11 +167,6 @@ img {
     width: 550px;
 }
 
-#answers {
-    display: flex;
-    height: 100px;
-    width: 400px;
-}
 
 button:hover {
     opacity: 0.7;
@@ -145,7 +177,6 @@ button:hover {
     align-items: center;
     justify-content: center;
     margin-top: 100px;
-    
 }
 
 input[type='radio'] {

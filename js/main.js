@@ -167,11 +167,11 @@ function nextQuestion() {
 
 
 function showResults() {
-        endImg.innerHTML = "<img src= 'assets/dinoimages/dinohome.jpg'/>";
+        endImg.innerHTML = "<img src= 'assets/dinoimages/yeahdino.jpeg'/>";
         answers.style.display = 'block';
         submit.style.display = 'none';
         quiz.style.display = 'none';
-        answers.textContent = `You got ${answersContainer.length} out of ${dinosaurs.length} correct!`;
+        answers.textContent = `You got ${answersContainer.length} out of ${dinosaurs.length} correct`;
         replay.style.display = 'block';
     };
 
