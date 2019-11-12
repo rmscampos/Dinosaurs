@@ -2,29 +2,28 @@
 
 var answersContainer = [];
 var currentIdx = 0;
-// let numberPerPage = 1;
 
 const dinosaurs = [
     { 
-        image: 'assets/dinoimages/stego.png',
+        image: 'assets/dinoimages/newstego.png',
         dinosaur: 'Stegosaurus',
         answers: ['Jurassic', 'Cretaceous', 'Triassic'],
         correctAnswer: 'Jurassic'
         },   
     { 
-        image: 'assets/dinoimages/trex.jpeg',
+        image: 'assets/dinoimages/newtrex.png',
         dinosaur: 'Tyrannosaurus Rex',
         answers: ['Jurassic', 'Cretaceous', 'Triassic'],  
         correctAnswer: 'Cretaceous'
     },
     { 
-        image: 'assets/dinoimages/apatosaurus.png',
+        image: 'assets/dinoimages/newapatosaurus.png',
         dinosaur: 'Apatosaurus',
         answers: ['Jurassic', 'Cretaceous', 'Triassic'], 
         correctAnswer: 'Jurassic'
     },
     { 
-        image: 'assets/dinoimages/procompsognathus.png',
+        image: 'assets/dinoimages/newprocompsognathus.png',
         dinosaur: 'Procompsognathus',
         answers: ['Jurassic', 'Cretaceous', 'Triassic'],  
         correctAnswer: 'Triassic'
@@ -36,31 +35,31 @@ const dinosaurs = [
         correctAnswer: 'Jurassic'
     },
     { 
-        image: 'assets/dinoimages/velociraptor.png',
+        image: 'assets/dinoimages/newvelociraptor.png',
         dinosaur: 'Velociraptor',
         answers: ['Jurassic', 'Cretaceous', 'Triassic'],   
         correctAnswer: 'Cretaceous'
     },
     {   
-        image: 'assets/dinoimages/eoraptor.jpg',
+        image: 'assets/dinoimages/neweoraptor.png',
         dinosaur: 'Eoraptor',
         answers: ['Jurassic', 'Cretaceous', 'Triassic'],  
         correctAnswer: 'Eoraptor'
     },
     { 
-        image: 'assets/dinoimages/triceratops.jpeg',
+        image: 'assets/dinoimages/newtriceratops.png',
         dinosaur: 'Triceratops',
         answers: ['Jurassic', 'Cretaceous', 'Triassic'],
         correctAnswer: 'Cretaceous'
     },
     { 
-        image: 'assets/dinoimages/ankylosaurus.jpg',
+        image: 'assets/dinoimages/newankylosaurus.png',
         dinosaur: 'Anklyosaurus',
         answers: ['Jurassic', 'Cretaceous', 'Triassic'],
         correctAnswer: 'Jurassic'
     },
     { 
-        image: 'assets/dinoimages/iguanodon.jpg',
+        image: 'assets/dinoimages/newiguanodon.png',
         dinosaur: 'Iguanodon',
         answers: ['Jurassic', 'Cretaceous', 'Triassic'],
         correctAnswer: 'Cretaceous'
@@ -74,14 +73,12 @@ var numCorrect = 0;
 
 /*----- cached element references -----*/
 
-let clock = document.querySelector('.clock');
 
 let dinoImg = document.getElementById('dinoImg');
 let dinoType = document.querySelector('.dinotype');
 
 let start = document.getElementById('start');
 let next = document.getElementById('next');
-let previous = document.getElementById('previous');
 let submit = document.getElementById('submit');
 let answers = document.getElementById('answers');
 let replay = document.getElementById('replay');
@@ -107,7 +104,6 @@ window.addEventListener('load', landingPage);
 function landingPage () {
     quiz.style.display = 'none';
     next.style.display = 'none';
-    previous.style.display = 'none';
     submit.style.display = 'none';
     answers.style.display = 'none';
     replay.style.display = 'none';
@@ -119,41 +115,19 @@ function startGame() {
     updatePage();
     quiz.style.display = 'block';
     next.style.display = 'block';
-    clock.style.display = 'block';
     home.style.display = 'none'; 
     start.style.display = 'none';
-    previous.style.display = 'none';
     submit.style.display = 'none'; 
     answers.style.display = 'none';
     replay.style.display = 'none';
 
 };
 
-function startTimer() {
-    let min = 2
-    let sec = 00;
-    let timer = setInterval(function(){
-        document.querySelector('.clock').innerHTML='00:'+sec;
-        sec--;
-        if (sec < 0) {
-            clearInterval(timer);
-        }
-    }, 1000);
-}
 
-// window.onload = function () {
-    //     let time = 120
-    //         display = document.querySelector('.clock');
-    //     startTimer(time, display);
-    // };
-    
-    
-    
-    function updatePage() {
+function updatePage() {
         let currentDino = dinosaurs[currentIdx];
         dinoType.innerHTML = currentDino.dinosaur;
         dinoImg.innerHTML = `<img src='${currentDino.image}'/>`;
-        previous.style.display = 'block';
     };
     
     
@@ -163,11 +137,14 @@ function nextQuestion() {
             currentIdx += 1;
             updatePage();
             answersContainer.push(dinosaurs.correctAnswer);
+        // } else if (answer.value === null) {
+        //     alert('Choose!');
         } else {
         currentIdx += 1;
         updatePage();
         }
-    let clearChoice = document.getElementsByName('choice');
+    
+        let clearChoice = document.getElementsByName('choice');
         for (var i=  0; i < clearChoice.length; i++)
         clearChoice[i].checked = false;
         
@@ -191,19 +168,15 @@ function nextQuestion() {
 
 function showResults() {
         answers.style.display = 'block';
+        submit.style.display = 'none';
         quiz.style.display = 'none';
         answers.textContent = `You got ${answersContainer.length} out of ${dinosaurs.length} correct!`;
-  };
+        replay.style.display = 'block';
+    };
 
 
 function replayGame(evt) {
     window.location.reload();
 };
 
-
-
-
-
-//render the question
-//render progress
  
