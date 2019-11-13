@@ -44,7 +44,7 @@ const dinosaurs = [
         image: 'assets/dinoimages/neweoraptor.png',
         dinosaur: 'Eoraptor',
         answers: ['Jurassic', 'Cretaceous', 'Triassic'],  
-        correctAnswer: 'Eoraptor'
+        correctAnswer: 'Triassic'
     },
     { 
         image: 'assets/dinoimages/newtriceratops.png',
